@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Płock - Foreigner Support</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <button class="icon-btn" id="hamburgerBtn">☰</button>
+            <button class="icon-btn" id="phoneBtn">📞</button>
+        </div>
+        <div class="header-right">
+            <button class="lang-btn" id="langMenuBtn">🌐</button>
+        </div>
+
+        <div id="navMenu" class="dropdown hidden">
+            <a href="index.html" data-key="menu-home">HOME</a>
+            <a href="firststeps.html" data-key="menu-steps">FIRST STEPS</a>
+            <a href="survey.html" data-key="menu-survey">SURVEY</a>
+            <a href="knowledge.html" data-key="menu-kb">KNOWLEDGE BASE</a>
+            <a href="help.html" data-key="menu-help">HELP</a>
+        </div>
+
+        <div id="phoneMenu" class="dropdown hidden">
+            <p><strong>Police</strong>: 997</p>
+            <p><strong>City Hall</strong>: 24 367 15 00</p>
+            <p><strong>Municipal Guard</strong>: 986</p>
+            <p><strong>Immigrant Center</strong>: 24 367 16 50</p>
+        </div>
+
+        <div id="langMenu" class="dropdown hidden">
+    <div onclick="changeLang('pl')">
+        <img src="https://flagcdn.com/w20/pl.png" width="20" style="margin-right:8px; vertical-align:middle;"> Polski
+    </div>
+    <div onclick="changeLang('en')">
+        <span style="margin-right:8px; width:20px; display:inline-block; text-align:center;">🌐</span> English
+    </div>
+    <div onclick="changeLang('ua')">
+        <img src="https://flagcdn.com/w20/ua.png" width="20" style="margin-right:8px; vertical-align:middle;"> Українська
+    </div>
+    <div onclick="changeLang('ru')">
+        <img src="https://flagcdn.com/w20/ru.png" width="20" style="margin-right:8px; vertical-align:middle;"> Русский
+    </div>
+</div>
+    </header>
+
+    <main class="container">
+        <div class="logo-area">
+            <img src="logo_plock.jpeg" alt="Płock Logo" class="main-logo">
+            <h1 data-key="welcome">Welcome to the application for foreigners</h1>
+        </div>
+        
+        <div class="main-nav-stack">
+            <a href="firststeps.html" class="gradient-btn-large" data-key="menu-steps">FIRST STEPS</a>
+            <a href="knowledge.html" class="gradient-btn-large" data-key="menu-kb">KNOWLEDGE BASE</a>
+        </div>
+
+        <div class="input-container" style="margin-top: 30px; width: 100%; max-width: 350px;">
+    <input type="text" id="aiInput" data-key="ai-placeholder" placeholder="How can I help you?">
+    <button class="mic-btn">🎤</button>
+</div>
+    </main>
+
+    <button class="assistant-fab"><span>💬</span></button>
+    <script src="script.js"></script>
+</body>
+</html>

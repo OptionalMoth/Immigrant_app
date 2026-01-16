@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Base - Płock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+    <div class="header-left">
+        <button class="icon-btn" onclick="location.href='index.html'">←</button>
+    </div>
+    
+    <div class="header-right">
+        <button class="lang-btn" id="langMenuBtn">
+            <span id="current-lang-flag">🌐</span>
+        </button>
+    </div>
+
+    <div id="langMenu" class="dropdown hidden">
+        <div onclick="changeLang('pl')">
+            <img src="https://flagcdn.com/w20/pl.png" width="20" style="margin-right:8px; vertical-align:middle;"> Polski
+        </div>
+        <div onclick="changeLang('en')">
+            <span style="margin-right:8px; width:20px; display:inline-block; text-align:center;">🌐</span> English
+        </div>
+        <div onclick="changeLang('ua')">
+            <img src="https://flagcdn.com/w20/ua.png" width="20" style="margin-right:8px; vertical-align:middle;"> Українська
+        </div>
+        <div onclick="changeLang('ru')">
+            <img src="https://flagcdn.com/w20/ru.png" width="20" style="margin-right:8px; vertical-align:middle;"> Русский
+        </div>
+    </div>
+</header>
+
+    <main class="container">
+        <h2 data-key="menu-kb">KNOWLEDGE BASE</h2>
+        <div class="input-container" style="margin-top: 10px;">
+            <input type="text" placeholder="Search for information...">
+        </div>
+        <div class="grid-container" style="margin-top:20px; text-align: left;">
+            <div class="step-card full-width"><h3>Local Laws</h3><p>Information about Płock city regulations...</p></div>
+            <div class="step-card full-width"><h3>Culture & Traditions</h3><p>Understanding Polish customs...</p></div>
+        </div>
+    </main>
+
+    <button class="assistant-fab"><span>💬</span></button>
+    <script src="script.js"></script>
+</body>
+</html>

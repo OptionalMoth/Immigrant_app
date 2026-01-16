@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Steps - Płock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-left"><button class="icon-btn" onclick="location.href='index.html'">←</button></div>
+        <div class="header-right">
+    <button class="lang-btn" id="langMenuBtn">
+        <span id="current-lang-flag">🌐</span>
+    </button>
+</div>
+
+<div id="langMenu" class="dropdown hidden">
+    <div onclick="changeLang('pl')">
+        <img src="https://flagcdn.com/w20/pl.png" width="20" style="margin-right:8px; vertical-align:middle;"> Polski
+    </div>
+    <div onclick="changeLang('en')">
+        <span style="margin-right:8px; width:20px; display:inline-block; text-align:center;">🌐</span> English
+    </div>
+    <div onclick="changeLang('ua')">
+        <img src="https://flagcdn.com/w20/ua.png" width="20" style="margin-right:8px; vertical-align:middle;"> Українська
+    </div>
+    <div onclick="changeLang('ru')">
+        <img src="https://flagcdn.com/w20/ru.png" width="20" style="margin-right:8px; vertical-align:middle;"> Русский
+    </div>
+</div>
+    </header>
+
+    <main class="container">
+        <h2 data-key="menu-steps" style="color: var(--red);">FIRST STEPS</h2>
+
+        <div class="accordion-container">
+            <div class="category-box">
+                <div class="category-header" onclick="toggleAccordion('trans')"><span data-key="cat-trans">Transportation</span> <span>▼</span></div>
+                <div id="trans" class="category-content hidden">
+                    <p class="sub-item" data-key="sub-pub">Public Transport</p>
+                    <ul>
+                        <li data-key="item-bike">City Bike</li>
+                        <li data-key="item-pkm">PKM Timetable</li>
+                        <li data-key="item-km">KM Timetable</li>
+                    </ul>
+                    <p class="sub-item" data-key="sub-own">Own Transport</p>
+                    <ul>
+                        <li data-key="item-dl">Driving License</li>
+                        <li data-key="item-road">Road Law</li>
+                        <li data-key="item-reg">Vehicle Registration</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="category-box">
+                <div class="category-header" onclick="toggleAccordion('res')"><span data-key="cat-res">Residence</span> <span>▼</span></div>
+                <div id="res" class="category-content hidden">
+                    <ul>
+                        <li data-key="item-pesel">PESEL Number</li>
+                        <li data-key="item-card">Residence Card</li>
+                        <li data-key="item-cite">Citizenship</li>
+                        <li data-key="item-visa">Visa</li>
+                        <li data-key="item-phone">Polish Phone Number</li>
+                        <li data-key="item-insur">Insurance</li>
+                        <li data-key="item-bank">Finance (Bank Account)</li>
+                        <li data-key="item-safe">Safety</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="category-box">
+                <div class="category-header" onclick="toggleAccordion('work')"><span data-key="cat-work">Work</span> <span>▼</span></div>
+                <div id="work" class="category-content hidden">
+                    <p class="sub-item" data-key="sub-job">Looking for Job</p>
+                    <ul>
+                        <li data-key="item-permit">Work Permit</li>
+                        <li data-key="item-pup">Employment Office</li>
+                        <li data-key="item-db">Central Job Database</li>
+                        <li data-key="item-krs">KRS / CEIDG</li>
+                    </ul>
+                    <p class="sub-item" data-key="sub-biz">Own Business</p>
+                </div>
+            </div>
+
+            <div class="category-box">
+                <div class="category-header" onclick="toggleAccordion('apt')"><span data-key="cat-apt">Apartment</span> <span>▼</span></div>
+                <div id="apt" class="category-content hidden">
+                    <ul>
+                        <li data-key="item-buy">Purchase</li>
+                        <li data-key="item-rent">Rental</li>
+                        <li data-key="item-social">Social Housing</li>
+                        <li data-key="item-coll">Collective Accommodation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="category-box">
+                <div class="category-header" onclick="toggleAccordion('edu')"><span data-key="cat-edu">Education</span> <span>▼</span></div>
+                <div id="edu" class="category-content hidden">
+                    <p class="sub-item" data-key="sub-kids">Children</p>
+                    <ul>
+                        <li data-key="item-nurs">Nursery</li>
+                        <li data-key="item-kind">Kindergarten</li>
+                        <li data-key="item-prim">Primary School</li>
+                        <li data-key="item-sec">Secondary School</li>
+                    </ul>
+                    <p class="sub-item" data-key="sub-adult">Adults</p>
+                </div>
+            </div>
+
+            <div class="category-box">
+                <div class="category-header" onclick="toggleAccordion('health')"><span data-key="cat-health">Health & Social</span> <span>▼</span></div>
+                <div id="health" class="category-content hidden">
+                    <ul>
+                        <li data-key="item-legal">Legal Assistance</li>
+                        <li data-key="item-poz">Choosing a Clinic (POZ)</li>
+                        <li data-key="item-nfz">Where to treat - NFZ</li>
+                        <li data-key="item-mops">MOPS</li>
+                        <li data-key="item-pharm">Pharmacy / Prescription</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="category-box">
+                <div class="category-header" onclick="toggleAccordion('free')"><span data-key="cat-free">Free Time</span> <span>▼</span></div>
+                <div id="free" class="category-content hidden">
+                    <ul>
+                        <li data-key="item-cal">Event Calendar</li>
+                        <li data-key="item-arta">PŁOCK ARTA / POKIS</li>
+                        <li data-key="item-mosir">MOSIR / Sport</li>
+                        <li data-key="item-mdk">MDK / SDK</li>
+                        <li data-key="item-lib">Płock Library</li>
+                        <li data-key="item-rel">Religion</li>
+                        <li data-key="item-u3w">University of 3rd Age</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleAccordion(id) {
+            document.querySelectorAll('.category-content').forEach(el => {
+                if (el.id === id) el.classList.toggle('hidden');
+                else el.classList.add('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

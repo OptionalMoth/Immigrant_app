@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey - Płock</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .survey-container { text-align: left; width: 100%; max-width: 500px; margin: 20px auto; padding-bottom: 100px; }
+        .q-group { background: white; padding: 20px; border-radius: 15px; box-shadow: var(--shadow); margin-bottom: 20px; border-left: 5px solid var(--orange); }
+        .q-title { font-weight: bold; margin-bottom: 15px; color: #444; display: block; }
+        .opt label { display: block; background: #f9f9f9; padding: 12px; margin-bottom: 8px; border-radius: 8px; cursor: pointer; transition: 0.2s; border: 1px solid #eee; }
+        .opt input { margin-right: 10px; accent-color: var(--red); }
+        .opt label:hover { background: #fff3e0; border-color: var(--orange); }
+        select { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #eee; background: #f9f9f9; font-size: 1rem; }
+    </style>
+</head>
+<body>
+    <header>
+    <div class="header-left">
+        <button class="icon-btn" onclick="location.href='index.html'">←</button>
+    </div>
+    
+    <div class="header-right">
+        <button class="lang-btn" id="langMenuBtn">
+            <span id="current-lang-flag">🌐</span>
+        </button>
+    </div>
+
+    <div id="langMenu" class="dropdown hidden">
+        <div onclick="changeLang('pl')">
+            <img src="https://flagcdn.com/w20/pl.png" width="20" style="margin-right:8px; vertical-align:middle;"> Polski
+        </div>
+        <div onclick="changeLang('en')">
+            <span style="margin-right:8px; width:20px; display:inline-block; text-align:center;">🌐</span> English
+        </div>
+        <div onclick="changeLang('ua')">
+            <img src="https://flagcdn.com/w20/ua.png" width="20" style="margin-right:8px; vertical-align:middle;"> Українська
+        </div>
+        <div onclick="changeLang('ru')">
+            <img src="https://flagcdn.com/w20/ru.png" width="20" style="margin-right:8px; vertical-align:middle;"> Русский
+        </div>
+    </div>
+</header>
+
+    <main class="container">
+    <h2 data-key="menu-survey" style="color: var(--red);">SURVEY</h2>
+    
+    <div class="survey-container">
+        <div class="q-group">
+            <span class="q-title" data-key="sur-q-foreigner">Are you a foreigner?</span>
+            <div class="opt">
+                <label>
+                    <input type="radio" name="foreigner" value="yes"> 
+                    <span data-key="sur-opt-yes">Yes</span>
+                </label>
+                <label>
+                    <input type="radio" name="foreigner" value="no"> 
+                    <span data-key="sur-opt-no">No</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="q-group">
+            <span class="q-title" data-key="sur-q-purpose">What is the purpose of your visit?</span>
+            <div class="opt">
+                <label>
+                    <input type="radio" name="purpose" value="tourist"> 
+                    <span data-key="sur-opt-tourist">Tourist</span>
+                </label>
+                <label>
+                    <input type="radio" name="purpose" value="stay"> 
+                    <span data-key="sur-opt-stay">I want to stay (e.g., work)</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="q-group">
+            <span class="q-title" data-key="sur-q-kids">Number of children:</span>
+            <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value=">2" data-key="sur-opt-kids-more">More than 2</option>
+            </select>
+        </div>
+
+        <div class="q-group">
+            <span class="q-title" data-key="sur-q-edu">Education:</span>
+            <select>
+                <option value="Primary" data-key="edu-primary">Primary</option>
+                <option value="Vocational" data-key="edu-vocational">Vocational</option>
+                <option value="Secondary" data-key="edu-secondary">Secondary</option>
+                <option value="Bachelor" data-key="edu-bachelor">Bachelor's degree</option>
+                <option value="Master" data-key="edu-master">Master's degree</option>
+                <option value="PhD" data-key="edu-phd">PhD degree</option>
+            </select>
+        </div>
+
+        <button class="gradient-btn-large" data-key="sur-btn-submit" style="width: 100%; border: none; cursor: pointer;">SUBMIT SURVEY</button>
+    </div>
+</main>
+
+    <script src="script.js"></script>
+</body>
+</html>
